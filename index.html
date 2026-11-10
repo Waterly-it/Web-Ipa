@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Human Body Explorer — Sistem Saraf & Gerak Manusia</title>
+  <meta name="description" content="Media edukasi digital interaktif untuk memahami hubungan sistem saraf dan gerak pada manusia. SMK Raden Umar Said Kudus — Kelas X PPLG.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav__wrap">
+      <a href="#hero" class="nav__brand">🧠 BodyExplorer</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#saraf">Sistem Saraf</a></li>
+        <li><a href="#gerak">Sistem Gerak</a></li>
+        <li><a href="#hubungan">Hubungan</a></li>
+        <li><a href="#diagram">Diagram Alur</a></li>
+        <li><a href="#kuis">Kuis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__particles" id="heroParticles"></div>
+      </div>
+      <div class="wrap hero__content">
+        <p class="hero__tag">IPAS — Kelas X PPLG</p>
+        <h1 class="hero__title">
+          Sistem Saraf <span class="hero__amp">&</span> Gerak<br>
+          <span class="hero__accent">Manusia</span>
+        </h1>
+        <p class="hero__desc">
+          Jelajahi bagaimana otak mengirim perintah, saraf menghantarkan sinyal,
+          dan otot menggerakkan tubuh — semuanya terjadi dalam hitungan milidetik.
+        </p>
+        <div class="hero__actions">
+          <a href="#saraf" class="btn btn--primary">Mulai Belajar</a>
+          <a href="#kuis" class="btn btn--outline">Kerjakan Kuis</a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Gulir ke bawah</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SISTEM SARAF
+    ════════════════════════════════════════════════════════ -->
+    <section class="section section--saraf" id="saraf">
+      <div class="wrap">
+        <div class="section__header">
+          <span class="section__number">01</span>
+          <h2 class="section__title">Sistem Saraf Manusia</h2>
+          <p class="section__subtitle">
+            Jaringan komunikasi tercepat di tubuh manusia — mengirim sinyal listrik
+            hingga 120 meter per detik.
+          </p>
+        </div>
+
+        <div class="cards cards--three">
+          <!-- Card: Otak -->
+          <article class="card" data-reveal>
+            <div class="card__icon">🧠</div>
+            <h3 class="card__title">Otak</h3>
+            <p class="card__desc">
+              Pusat pengolahan informasi dan koordinasi seluruh tubuh.
+              Terdiri atas otak besar (serebrum), otak kecil (serebelum), dan batang otak.
+            </p>
+            <ul class="card__list">
+              <li>Menerima dan memproses rangsangan</li>
+              <li>Mengatur gerakan sadar</li>
+              <li>Pusat memori dan emosi</li>
+            </ul>
+            <div class="card__example">
+              <strong>Contoh:</strong> Memutuskan mengangkat tangan saat guru bertanya.
+            </div>
+          </article>
+
+          <!-- Card: Sumsum Tulang Belakang -->
+          <article class="card" data-reveal>
+            <div class="card__icon">🦴</div>
+            <h3 class="card__title">Sumsum Tulang Belakang</h3>
+            <p class="card__desc">
+              Jalur utama penghantaran impuls saraf antara otak dan tubuh,
+              sekaligus pusat kendali gerak refleks tertentu.
+            </p>
+            <ul class="card__list">
+              <li>Menghantarkan sinyal dari dan ke otak</li>
+              <li>Pusat refleks sederhana</li>
+              <li>Dilindungi oleh ruas-ruas tulang belakang</li>
+            </ul>
+            <div class="card__example">
+              <strong>Contoh:</strong> Menarik tangan saat menyentuh benda panas — refleks tanpa menunggu otak.
+            </div>
+          </article>
+
+          <!-- Card: Saraf Tepi -->
+          <article class="card" data-reveal>
+            <div class="card__icon">⚡</div>
+            <h3 class="card__title">Saraf Tepi</h3>
+            <p class="card__desc">
+              Jaringan saraf yang menghubungkan sistem saraf pusat (otak dan sumsum tulang belakang)
+              dengan seluruh bagian tubuh.
+            </p>
+            <ul class="card__list">
+              <li>Saraf sensorik: membawa rangsangan ke SSP</li>
+              <li>Saraf motorik: membawa perintah ke efektor</li>
+              <li>Menjangkau seluruh organ dan otot</li>
+            </ul>
+            <div class="card__example">
+              <strong>Contoh:</strong> Kulit jari merasakan sentuhan lalu mengirim sinyal ke otak.
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive: Fungsi Sistem Saraf -->
+        <div class="interactive-box" data-reveal>
+          <h3 class="interactive-box__title">🔍 Fungsi Utama Sistem Saraf</h3>
+          <div class="function-flow">
+            <div class="function-step function-step--active" data-step="1">
+              <div class="function-step__num">1</div>
+              <div class="function-step__content">
+                <h4>Menerima Rangsangan</h4>
+                <p>Reseptor menangkap stimulus dari lingkungan — cahaya, suara, suhu, tekanan, rasa, dan bau.</p>
+              </div>
+            </div>
+            <div class="function-arrow">→</div>
+            <div class="function-step" data-step="2">
+              <div class="function-step__num">2</div>
+              <div class="function-step__content">
+                <h4>Mengolah Informasi</h4>
+                <p>Otak atau sumsum tulang belakang memproses sinyal dan menentukan respons yang tepat.</p>
+              </div>
+            </div>
+            <div class="function-arrow">→</div>
+            <div class="function-step" data-step="3">
+              <div class="function-step__num">3</div>
+              <div class="function-step__content">
+                <h4>Menghasilkan Respons</h4>
+                <p>Perintah dikirim ke efektor (otot atau kelenjar) untuk melakukan tindakan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SISTEM GERAK
+    ════════════════════════════════════════════════════════ -->
+    <section class="section section--gerak" id="gerak">
+      <div class="wrap">
+        <div class="section__header">
+          <span class="section__number">02</span>
+          <h2 class="section__title">Sistem Gerak Manusia</h2>
+          <p class="section__subtitle">
+            Tulang, sendi, dan otot bekerja sama membentuk sistem gerak —
+            memungkinkan tubuh berdiri, berjalan, berlari, dan melakukan gerakan kompleks.
+          </p>
+        </div>
+
+        <div class="cards cards--three">
+          <!-- Card: Tulang -->
+          <article class="card card--gerak" data-reveal>
+            <div class="card__icon">🦴</div>
+            <h3 class="card__title">Tulang</h3>
+            <p class="card__desc">
+              Rangka tubuh yang menopang, melindungi organ vital,
+              dan menjadi tempat melekatnya otot.
+            </p>
+            <div class="card__detail">
+              <div class="detail-item">
+                <span class="detail-item__label">Jumlah</span>
+                <span class="detail-item__value">206 tulang</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Fungsi</span>
+                <span class="detail-item__value">Penopang & pelindung</span>
+              </div>
+            </div>
+            <div class="card__example">
+              <strong>Contoh:</strong> Tulang tengkorak melindungi otak, tulang rusuk melindungi jantung dan paru.
+            </div>
+          </article>
+
+          <!-- Card: Sendi -->
+          <article class="card card--gerak" data-reveal>
+            <div class="card__icon">🔗</div>
+            <h3 class="card__title">Sendi</h3>
+            <p class="card__desc">
+              Penghubung antar tulang yang memungkinkan gerakan tertentu.
+              Setiap sendi memiliki jangkauan gerak yang berbeda.
+            </p>
+            <div class="card__detail">
+              <div class="detail-item">
+                <span class="detail-item__label">Pelumas</span>
+                <span class="detail-item__value">Cairan sinovial</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Jenis</span>
+                <span class="detail-item__value">Engsel, peluru, putar, pelana</span>
+              </div>
+            </div>
+            <div class="card__example">
+              <strong>Contoh:</strong> Sendi lutut (engsel) untuk menekuk kaki, sendi bahu (peluru) untuk memutar lengan.
+            </div>
+          </article>
+
+          <!-- Card: Otot -->
+          <article class="card card--gerak" data-reveal>
+            <div class="card__icon">💪</div>
+            <h3 class="card__title">Otot</h3>
+            <p class="card__desc">
+              Penggerak utama tubuh — berkontraksi dan relaksasi
+              untuk menghasilkan gerakan pada tulang melalui sendi.
+            </p>
+            <div class="card__detail">
+              <div class="detail-item">
+                <span class="detail-item__label">Jumlah</span>
+                <span class="detail-item__value">600+ otot</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Jenis</span>
+                <span class="detail-item__value">Lurik, polos, jantung</span>
+              </div>
+            </div>
+            <div class="card__example">
+              <strong>Contoh:</strong> Otot bisep berkontraksi untuk menekuk lengan, otot trisep relaksasi.
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive: Kerja Sama Sistem Gerak -->
+        <div class="interactive-box interactive-box--gerak" data-reveal>
+          <h3 class="interactive-box__title">💡 Bagaimana Tulang, Sendi, dan Otot Bekerja Sama?</h3>
+          <div class="collab-demo">
+            <button class="collab-demo__btn" id="collabBtn">
+              <span class="collab-demo__btn-text">Klik untuk simulasi menekuk lengan</span>
+              <span class="collab-demo__btn-icon">👆</span>
+            </button>
+            <div class="collab-demo__visual" id="collabVisual">
+              <div class="arm-diagram">
+                <div class="arm-diagram__upper" id="armUpper">
+                  <span class="arm-diagram__label arm-diagram__label--bone">Tulang Lengan Atas</span>
+                </div>
+                <div class="arm-diagram__joint" id="armJoint">
+                  <span class="arm-diagram__label arm-diagram__label--joint">Sendi Siku</span>
+                </div>
+                <div class="arm-diagram__lower" id="armLower">
+                  <span class="arm-diagram__label arm-diagram__label--bone">Tulang Lengan Bawah</span>
+                </div>
+                <div class="arm-diagram__muscle arm-diagram__muscle--bisep" id="bisep">
+                  <span class="arm-diagram__label arm-diagram__label--muscle">Bisep<br><small>kontraksi</small></span>
+                </div>
+                <div class="arm-diagram__muscle arm-diagram__muscle--trisep" id="trisep">
+                  <span class="arm-diagram__label arm-diagram__label--muscle">Trisep<br><small>relaksasi</small></span>
+                </div>
+              </div>
+            </div>
+            <div class="collab-demo__steps" id="collabSteps">
+              <div class="collab-step collab-step--active">
+                <span class="collab-step__icon">🦴</span>
+                <span class="collab-step__text"><strong>Tulang</strong> menjadi tuas penggerak</span>
+              </div>
+              <div class="collab-step">
+                <span class="collab-step__icon">🔗</span>
+                <span class="collab-step__text"><strong>Sendi siku</strong> menjadi titik engsel</span>
+              </div>
+              <div class="collab-step">
+                <span class="collab-step__icon">💪</span>
+                <span class="collab-step__text"><strong>Otot bisep</strong> berkontraksi, trisep relaksasi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HUBUNGAN SARAF & GERAK
+    ════════════════════════════════════════════════════════ -->
+    <section class="section section--hubungan" id="hubungan">
+      <div class="wrap">
+        <div class="section__header">
+          <span class="section__number">03</span>
+          <h2 class="section__title">Hubungan Sistem Saraf & Gerak</h2>
+          <p class="section__subtitle">
+            Gerakan tubuh tidak terjadi sendiri — setiap gerakan dimulai dari rangsangan
+            yang diproses oleh sistem saraf dan dieksekusi oleh sistem gerak.
+          </p>
+        </div>
+
+        <!-- Gerak Sadar vs Refleks -->
+        <div class="compare" data-reveal>
+          <div class="compare__card compare__card--sadar">
+            <div class="compare__badge">Gerak Sadar</div>
+            <h3 class="compare__title">Dikendalikan oleh Otak</h3>
+            <p class="compare__desc">
+              Gerakan yang disengaja dan melibatkan kesadaran penuh.
+              Sinyal dikirim dari otak melalui saraf motorik ke otot.
+            </p>
+            <div class="compare__path">
+              <div class="path-node">Rangsangan</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Reseptor</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node path-node--highlight">Otak</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Saraf Motorik</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Otot (Gerak)</div>
+            </div>
+            <ul class="compare__examples">
+              <li>Menulis di papan tulis</li>
+              <li>Mengangkat tangan saat bertanya</li>
+              <li>Berjalan ke kantin</li>
+            </ul>
+          </div>
+
+          <div class="compare__vs">VS</div>
+
+          <div class="compare__card compare__card--refleks">
+            <div class="compare__badge">Gerak Refleks</div>
+            <h3 class="compare__title">Tanpa Perintah Otak</h3>
+            <p class="compare__desc">
+              Gerakan otomatis dan cepat tanpa disadari.
+              Sinyal diproses di sumsum tulang belakang tanpa menunggu otak.
+            </p>
+            <div class="compare__path">
+              <div class="path-node">Rangsangan</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Reseptor</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node path-node--highlight">Sumsum T.B.</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Saraf Motorik</div>
+              <div class="path-arrow">→</div>
+              <div class="path-node">Otot (Gerak)</div>
+            </div>
+            <ul class="compare__examples">
+              <li>Menarik tangan dari benda panas</li>
+              <li>Berkedip saat ada debu</li>
+              <li>Lutut menyentak saat diketuk</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interactive scenario -->
+        <div class="interactive-box interactive-box--scenario" data-reveal>
+          <h3 class="interactive-box__title">🎮 Pilih Skenario — Sadar atau Refleks?</h3>
+          <div class="scenario-picker">
+            <button class="scenario-btn" data-scenario="0">
+              <span class="scenario-btn__emoji">✋</span>
+              <span class="scenario-btn__text">Mengambil buku di rak</span>
+            </button>
+            <button class="scenario-btn" data-scenario="1">
+              <span class="scenario-btn__emoji">🔥</span>
+              <span class="scenario-btn__text">Menyentuh wajan panas</span>
+            </button>
+            <button class="scenario-btn" data-scenario="2">
+              <span class="scenario-btn__emoji">⚽</span>
+              <span class="scenario-btn__text">Menendang bola</span>
+            </button>
+            <button class="scenario-btn" data-scenario="3">
+              <span class="scenario-btn__emoji">👁️</span>
+              <span class="scenario-btn__text">Pupil mengecil di cahaya terang</span>
+            </button>
+          </div>
+          <div class="scenario-result" id="scenarioResult">
+            <p class="scenario-result__hint">👆 Pilih skenario di atas untuk melihat penjelasannya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         DIAGRAM ALUR
+    ════════════════════════════════════════════════════════ -->
+    <section class="section section--diagram" id="diagram">
+      <div class="wrap">
+        <div class="section__header">
+          <span class="section__number">04</span>
+          <h2 class="section__title">Diagram Alur Gerak</h2>
+          <p class="section__subtitle">
+            Klik pada setiap tahapan untuk melihat penjelasan detail
+            bagaimana sinyal saraf berubah menjadi gerakan tubuh.
+          </p>
+        </div>
+
+        <!-- Interactive diagram -->
+        <div class="flow-diagram" data-reveal>
+          <div class="flow-diagram__track">
+            <button class="flow-node flow-node--active" data-flow="0">
+              <span class="flow-node__icon">👁️</span>
+              <span class="flow-node__label">Rangsangan</span>
+            </button>
+            <div class="flow-line"><div class="flow-line__pulse"></div></div>
+            <button class="flow-node" data-flow="1">
+              <span class="flow-node__icon">🔌</span>
+              <span class="flow-node__label">Reseptor</span>
+            </button>
+            <div class="flow-line"><div class="flow-line__pulse"></div></div>
+            <button class="flow-node" data-flow="2">
+              <span class="flow-node__icon">⚡</span>
+              <span class="flow-node__label">Saraf Sensorik</span>
+            </button>
+            <div class="flow-line"><div class="flow-line__pulse"></div></div>
+            <button class="flow-node" data-flow="3">
+              <span class="flow-node__icon">🧠</span>
+              <span class="flow-node__label">Pusat Saraf</span>
+            </button>
+            <div class="flow-line"><div class="flow-line__pulse"></div></div>
+            <button class="flow-node" data-flow="4">
+              <span class="flow-node__icon">🔗</span>
+              <span class="flow-node__label">Saraf Motorik</span>
+            </button>
+            <div class="flow-line"><div class="flow-line__pulse"></div></div>
+            <button class="flow-node" data-flow="5">
+              <span class="flow-node__icon">💪</span>
+              <span class="flow-node__label">Efektor</span>
+            </button>
+          </div>
+          <div class="flow-detail" id="flowDetail">
+            <div class="flow-detail__card">
+              <h4 class="flow-detail__title" id="flowTitle">Rangsangan (Stimulus)</h4>
+              <p class="flow-detail__text" id="flowText">
+                Perubahan di lingkungan yang dapat dideteksi oleh tubuh.
+                Contoh: cahaya matahari, suara bel, sentuhan benda panas, bau makanan, rasa manis.
+                Rangsangan bisa berasal dari luar tubuh (eksternal) maupun dari dalam tubuh (internal).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         KUIS INTERAKTIF
+    ════════════════════════════════════════════════════════ -->
+    <section class="section section--kuis" id="kuis">
+      <div class="wrap">
+        <div class="section__header">
+          <span class="section__number">05</span>
+          <h2 class="section__title">Kuis Interaktif</h2>
+          <p class="section__subtitle">
+            Uji pemahamanmu tentang hubungan sistem saraf dan gerak manusia.
+            Jawab 5 pertanyaan berikut.
+          </p>
+        </div>
+
+        <div class="quiz" id="quiz" data-reveal>
+          <!-- Progress -->
+          <div class="quiz__progress">
+            <div class="quiz__progress-bar" id="quizProgress"></div>
+          </div>
+          <div class="quiz__counter">
+            Soal <span id="quizCurrent">1</span> dari <span id="quizTotal">5</span>
+          </div>
+
+          <!-- Question container -->
+          <div class="quiz__question" id="quizQuestion"></div>
+          <div class="quiz__options" id="quizOptions"></div>
+          <div class="quiz__feedback" id="quizFeedback"></div>
+
+          <div class="quiz__actions">
+            <button class="btn btn--primary quiz__next" id="quizNext" disabled>
+              Soal Berikutnya
+            </button>
+          </div>
+
+          <!-- Result -->
+          <div class="quiz__result" id="quizResult" hidden>
+            <div class="quiz__result-icon" id="resultIcon"></div>
+            <h3 class="quiz__result-title" id="resultTitle"></h3>
+            <p class="quiz__result-text" id="resultText"></p>
+            <div class="quiz__result-score">
+              Skor: <strong id="resultScore"></strong> / 5
+            </div>
+            <button class="btn btn--primary" id="quizRetry">Ulangi Kuis</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__left">
+        <span class="footer__brand">🧠 Digital Human Body Explorer</span>
+        <p class="footer__copy">
+          Proyek LKPD IPAS — SMK Raden Umar Said Kudus<br>
+          Kelas X PPLG • 2026
+        </p>
+      </div>
+      <div class="footer__right">
+        <p class="footer__credit">
+          Dibuat sebagai media edukasi digital interaktif<br>
+          Project Based Learning (PjBL)
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
