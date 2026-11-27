@@ -353,5 +353,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start quiz
   renderQuestion();
 
+  /* ── 9. Hero Image Lightbox ── */
+  const lightbox         = document.getElementById('lightbox');
+  const lightboxImg      = document.getElementById('lightboxImg');
+  const lightboxTitle    = document.getElementById('lightboxTitle');
+  const lightboxClose    = document.getElementById('lightboxClose');
+  const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+  let lastTrigger        = null;
+
+  function openLightbox(trigger) {
+    const src   = trigger.dataset.lightboxSrc;
+    const title = trigger.dataset.lightboxTitle || 'Diagram Anatomi';
+    const img   = trigger.querySelector('img');
+    if (!src || !lightbox) return;
+
+    lastTrigger = trigger;
+    lightboxImg.src = src;
+    lightboxImg.alt = img ? img.alt : title;
+    lightboxTitle.textContent = title;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  document.querySelectorAll('[data-lightbox-src]').forEach(btn => {
+    btn.addEventListener('click', () => openLightbox(btn));
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
 });
 
