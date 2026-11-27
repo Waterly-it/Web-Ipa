@@ -35,21 +35,79 @@
       <div class="hero__bg">
         <div class="hero__particles" id="heroParticles"></div>
       </div>
-      <div class="wrap hero__content">
-        <p class="hero__tag">IPAS — Kelas X PPLG</p>
-        <h1 class="hero__title">
-          Sistem Saraf <span class="hero__amp">&</span> Gerak<br>
-          <span class="hero__accent">Manusia</span>
-        </h1>
-        <p class="hero__desc">
-          Jelajahi bagaimana otak mengirim perintah, saraf menghantarkan sinyal,
-          dan otot menggerakkan tubuh — semuanya terjadi dalam hitungan milidetik.
-        </p>
-        <div class="hero__actions">
-          <a href="#saraf" class="btn btn--primary">Mulai Belajar</a>
-          <a href="#kuis" class="btn btn--outline">Kerjakan Kuis</a>
+
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <p class="hero__tag">IPAS — Kelas X PPLG</p>
+          <h1 class="hero__title">
+            Sistem Saraf <span class="hero__amp">&</span> Gerak<br>
+            <span class="hero__accent">Manusia</span>
+          </h1>
+          <p class="hero__desc">
+            Jelajahi bagaimana otak mengirim perintah, saraf menghantarkan sinyal,
+            dan otot menggerakkan tubuh — semuanya terjadi dalam hitungan milidetik.
+          </p>
+          <div class="hero__actions">
+            <a href="#saraf" class="btn btn--primary">Mulai Belajar</a>
+            <a href="#kuis" class="btn btn--outline">Kerjakan Kuis</a>
+          </div>
+        </div>
+
+        <div class="hero__showcase" aria-label="Ilustrasi Sistem Saraf dan Sistem Gerak Manusia">
+          <!-- Foto 1: Sistem Saraf -->
+          <figure class="hero__card">
+            <div class="hero__card-top">
+              <span class="hero__card-badge">
+                <span class="hero__card-dot"></span>
+                Sistem Saraf
+              </span>
+              <a href="#saraf" class="hero__card-link">Materi →</a>
+            </div>
+            <button
+              type="button"
+              class="hero__frame"
+              data-lightbox-src="images/sistem-saraf.jpg"
+              data-lightbox-title="Anatomi Sistem Saraf Manusia"
+              aria-label="Perbesar gambar anatomi Sistem Saraf Manusia"
+            >
+              <img
+                src="images/sistem-saraf.jpg"
+                alt="Diagram anatomi sistem saraf manusia meliputi otak, sumsum tulang belakang, dan jaringan saraf tepi"
+                width="330"
+                height="367"
+              >
+              <span class="hero__zoom-hint" aria-hidden="true">🔍 Perbesar</span>
+            </button>
+          </figure>
+
+          <!-- Foto 2: Sistem Gerak -->
+          <figure class="hero__card">
+            <div class="hero__card-top">
+              <span class="hero__card-badge">
+                <span class="hero__card-dot"></span>
+                Sistem Gerak
+              </span>
+              <a href="#gerak" class="hero__card-link">Materi →</a>
+            </div>
+            <button
+              type="button"
+              class="hero__frame"
+              data-lightbox-src="images/sistem-gerak.jpg"
+              data-lightbox-title="Anatomi Rangka & Sistem Gerak Manusia"
+              aria-label="Perbesar gambar anatomi Rangka dan Sistem Gerak Manusia"
+            >
+              <img
+                src="images/sistem-gerak.jpg"
+                alt="Diagram rangka manusia dari tengkorak hingga tulang pergelangan kaki"
+                width="462"
+                height="353"
+              >
+              <span class="hero__zoom-hint" aria-hidden="true">🔍 Perbesar</span>
+            </button>
+          </figure>
         </div>
       </div>
+
       <div class="hero__scroll">
         <span>Gulir ke bawah</span>
         <div class="hero__scroll-line"></div>
@@ -515,6 +573,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- ─── LIGHTBOX MODAL ─── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox__dialog">
+      <div class="lightbox__header">
+        <h3 class="lightbox__title" id="lightboxTitle">Diagram Anatomi</h3>
+        <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Tutup pratinjau gambar">✕</button>
+      </div>
+      <div class="lightbox__body">
+        <img src="" alt="" id="lightboxImg">
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
